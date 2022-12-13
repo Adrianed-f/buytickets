@@ -7,6 +7,7 @@ class Event(models.Model):
     about = models.TextField(verbose_name="О событии")
     session_start = models.DateTimeField(verbose_name="Начало сеанса")
     duration_session = models.CharField(max_length=8,verbose_name="Продолжительность сеанса")
+    image = models.ImageField(upload_to="events/", blank=True, null=True)
 
     def __str__(self):
         return self.title
